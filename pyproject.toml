@@ -10,7 +10,6 @@ version = "2024.1"
 # Dependencies included here. requirements.txt not needed in this example.
 dependencies = [
     "pytest",
-    "pandas",
 ]
 
 # Handles multuple top level packages
