@@ -1,0 +1,28 @@
+# Documentation for pyproject.toml: https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+# name and version are mandatory, change the values but do not delete them.
+[project]
+name = "comp0035_minimal_test" # Name of this project
+version = "2024.1"
+# Dependencies included here. requirements.txt not needed in this example.
+dependencies = [
+    "pytest",
+    "pandas",
+]
+
+# Handles multuple top level packages
+[tool.setuptools.packages.find]
+include = ["coursework1", "coursework2"]
+
+# Not strictly necessary as the default should find the data files in this structure
+[tool.setuptools.package-data]
+coursework2 = ["*.db"]
+
+# Pytest config with the -v (verbose) option
+[tool.pytest.ini_options]
+addopts = ["-v"]
+testpaths = ["tests"]
+pythonpath = ["coursework2"]
