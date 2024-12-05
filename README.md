@@ -6,4 +6,4 @@ The coursework package is called 'coursework 2' to match the name in the coursew
 
 Please install using `pip install -e .`
 
-Run the tests using `pytest -v`
+Run the tests using `pytest`
